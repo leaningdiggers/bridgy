@@ -15,3 +15,4 @@ RUN pip install --user bridgy
 ENV PATH="$HOME/.local/bin:$PATH"
 
 ENTRYPOINT PATH=$HOME/.local/bin:$PATH bridgy
+CMD [ "-help" ]
