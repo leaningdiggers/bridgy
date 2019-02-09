@@ -28,6 +28,5 @@ fi
 command="$base_command"" "
 command+="$@"
 eval "$command"
-printf "\n"
 
 
