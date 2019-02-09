@@ -5,6 +5,8 @@ if [ $# -eq 0 ]
             executable_content=`cat bridgy.sh`
             printf "put the following code in a file into your PATH"
             printf "$executable_content"
+            printf "\n"
+
 	else
 	        export LANG=C.UTF-8
 		exec "$@"
