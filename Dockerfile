@@ -15,5 +15,9 @@ RUN pip install --user bridgy
 ENV PATH="$HOME/.local/bin:$PATH"
 
 COPY ./entrypoint.sh /
+COPY ./bridgy.sh /
+VOLUME ["/hoeme/bridgy/.ssh"]
+VOLUME ["/hoeme/bridgy/.bridgy"]
+VOLUME ["/hoeme/bridgy/.aws"]
 ENTRYPOINT ["/entrypoint.sh"]
 CMD [ "/entrypoint.sh" ]

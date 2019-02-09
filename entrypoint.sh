@@ -2,8 +2,10 @@
 PATH="$HOME/.local/bin:$PATH"
 if [ $# -eq 0 ]
 	then
-		exec bridgy --help
+            executable_content=`cat bridgy.sh`
+            printf "put the following code in a file into your PATH"
+            printf "$executable_content"
 	else
-	        export LANG=C.UTF-8 
+	        export LANG=C.UTF-8
 		exec "$@"
 	fi
