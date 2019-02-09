@@ -14,5 +14,6 @@ RUN pip install --user bridgy
 
 ENV PATH="$HOME/.local/bin:$PATH"
 
-ENTRYPOINT PATH=$HOME/.local/bin:$PATH bridgy
-CMD [ "-help" ]
+COPY ./entrypoint.sh /
+ENTRYPOINT ["/entrypoint.sh"]
+CMD [ "/entrypoint.sh" ]
